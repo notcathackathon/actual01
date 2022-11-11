@@ -69,9 +69,25 @@ def Cat(cat):
         print("Wrong answer, check length :(")
 
 
-print("Enter some Password uwu : ")
-cat = input()
-CATCATCAT = len(cat) // 3
-CATCATCATCAT = CATCATCAT + 1
-CATCATCATCATCAT = CATCATCAT - 1
-Cat(cat)
+def recur(n, m)->str:
+    arr = []
+    for i in range(100,n):
+        for j in range (100,m):
+            cat = "{}cat{}".format(i,j)
+            arr.append(cat)
+    return arr
+        #     m += 1
+        # n += 1
+        # m = 100
+n, m = 1000, 1000
+arr = recur(n,m)
+
+
+# print("Enter some Password uwu : ")
+# cat = input()
+for i in arr:
+    print(i)
+    CATCATCAT = len(i) // 3
+    CATCATCATCAT = CATCATCAT + 1
+    CATCATCATCATCAT = CATCATCAT - 1
+    Cat(i)
